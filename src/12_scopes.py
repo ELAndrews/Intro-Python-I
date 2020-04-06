@@ -4,13 +4,18 @@
 # When you use a variable in a function, it's local in scope to the function.
 x = 12
 
+
 def change_x():
+    global x
     x = 99
+
 
 change_x()
 
 # This prints 12. What do we have to modify in change_x() to get it to print 99?
 print(x)
+
+# ANSWER: by adding in line 9 (global x) we are stating that we want to use to global scope variable and not the local to the function
 
 
 # This nested function has a similar problem.
@@ -19,12 +24,16 @@ def outer():
     y = 120
 
     def inner():
+        nonlocal y
         y = 999
 
     inner()
 
     # This prints 120. What do we have to change in inner() to get it to print
     # 999?
+
+# ANSWER: by adding in line 27 (nonlocal) we are stating that we want to use a variable that is neight local of global.
+
     # Note: Google "python nested function scope".
     print(y)
 
