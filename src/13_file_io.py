@@ -14,7 +14,8 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 with open('./foo.txt') as f:
     text = f.read()
     print(text)
-    f.close()
+    # f.close()
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -25,9 +26,11 @@ with open('./foo.txt') as f:
 
 with open("./bar.txt", "w") as f:
     f.write("This is my first line. \n Here is another line of arbitrary text \n And this is the final line of random text.")
-    f.close()
+    # f.close()
 
 with open("./bar.txt", "r") as f:
     text = f.read()
     print(text)
-    f.close()
+    # f.close()
+
+# When using with => it will close it for you so there is no need to have the close at the end!

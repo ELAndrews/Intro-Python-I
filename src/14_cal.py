@@ -49,3 +49,20 @@ else:
     print(my_cal)
 
     sys.exit()
+
+# improvements to include defaults and if there is a missinf arg, use default.
+
+# Victor's example
+
+#  argv = sys.argv[1:]
+#  month = int(datetime.now().month)
+#  year = int(datetime.now().year)
+#  if len(argv) > 2:
+#      print("Usage format: 14_cal.py [-h] [-m M] [-y Y]")
+#      exit()
+#  elif len(argv) == 2:
+#      month = int(argv[0])
+#      year = int(argv[1])
+#  elif len(argv) == 1:
+#      month = int(argv[0])
+#  print(calendar.month(int(year), int(month)))
